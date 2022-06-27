@@ -23,4 +23,10 @@ def install_command():
 install_button = Button(text="Install Desktop Environment",fg="red",font=("Arial",12),command=install_command)
 install_button.place(x=140,y=95)
 
+def delete_command():
+    de_name = menu.get()
+    install.uninstall(de = de_name)
+
+uninstall_button = Button(text="Uninstall Desktop Environment",fg="blue",font=("Arial",12),command=delete_command)
+uninstall_button.place(x=140,y=135)
 root.mainloop()
